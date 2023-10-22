@@ -27,9 +27,9 @@ class _MyBookingState extends State<MyBooking> with SingleTickerProviderStateMix
   }
 
   List<Widget> list = [
-    Tab(icon: Icon(Icons.confirmation_num),
+   const  Tab(icon: Icon(Icons.confirmation_num,color: Colors.white),
       text: 'Tickets Match'),
-    Tab(icon: Icon(Icons.hotel),
+   const Tab(icon: Icon(Icons.hotel,color: Colors.white),
     text: 'Hebergement'),
   ];
 
@@ -37,8 +37,10 @@ class _MyBookingState extends State<MyBooking> with SingleTickerProviderStateMix
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFFF7F00),
+        backgroundColor: Color(0xFF0E652F),
         bottom: TabBar(
+          labelColor: Color(0xFFFF7F00), // Couleur du texte de l'onglet actif
+              unselectedLabelColor: Colors.white,
           controller: _tabController,
           isScrollable: true,
           tabs: list,
@@ -51,10 +53,10 @@ class _MyBookingState extends State<MyBooking> with SingleTickerProviderStateMix
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.tune),
+            icon: const Icon(Icons.tune,color: Colors.white),
           )
         ],
-        title: Text('Mes tickets'),
+        title: const Text('Mes reservations', style: TextStyle(color: Colors.white),),
       ),
       body: TabBarView(
         controller: _tabController,
@@ -65,7 +67,7 @@ class _MyBookingState extends State<MyBooking> with SingleTickerProviderStateMix
               Container(
                   padding: EdgeInsets.all(10),
                   margin: EdgeInsets.only(top: 10),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Column(children: [
@@ -100,7 +102,7 @@ class _MyBookingState extends State<MyBooking> with SingleTickerProviderStateMix
                                         child: const Padding(
                                           padding: EdgeInsets.all(0.0),
                                           child: Text(
-                                            'Cote divoire vs Maroc',
+                                            'Cote divoire vs Guinée Bissau',
                                             style: TextStyle(
                                               fontSize: 15,
                                               fontWeight: FontWeight.bold,
@@ -111,7 +113,7 @@ class _MyBookingState extends State<MyBooking> with SingleTickerProviderStateMix
                                         ),
                                       ),
                                       Container(
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                           color:
                                               Color.fromARGB(31, 248, 245, 245),
                                         ),
@@ -154,7 +156,7 @@ class _MyBookingState extends State<MyBooking> with SingleTickerProviderStateMix
                                               child: const Padding(
                                                 padding: EdgeInsets.all(0.0),
                                                 child: Text(
-                                                  '08:30',
+                                                  '20:00',
                                                   style: TextStyle(
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.bold,
@@ -169,7 +171,7 @@ class _MyBookingState extends State<MyBooking> with SingleTickerProviderStateMix
                                         margin: EdgeInsets.only(top: 10),
                                         child: const Padding(
                                           padding: EdgeInsets.all(0.0),
-                                          child: Text('Tribune lagunaire'),
+                                          child: Text('Categorie 3'),
                                         ),
                                       ),
                                     ]),
@@ -194,7 +196,7 @@ class _MyBookingState extends State<MyBooking> with SingleTickerProviderStateMix
                                               margin: EdgeInsets.only(top: 10),
                                               child: const Padding(
                                                 padding: EdgeInsets.all(0.0),
-                                                child: Text('Sam,24 sept 2022'),
+                                                child: Text('13 Janvier 2024'),
                                               ),
                                             ),
                                           ]),
@@ -213,8 +215,7 @@ class _MyBookingState extends State<MyBooking> with SingleTickerProviderStateMix
                                               child: const Padding(
                                                 padding: EdgeInsets.all(0.0),
                                                 child: Icon(Icons.brightness_1,
-                                                    color: Color.fromARGB(
-                                                        202, 45, 201, 6)),
+                                                    color: Color(0xFF0E652F)),
                                               ),
                                             ),
                                             Container(

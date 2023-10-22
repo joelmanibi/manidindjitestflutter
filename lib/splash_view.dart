@@ -49,10 +49,10 @@ class SplashView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-                width: 150,
-                height: 150,
+                width: 300,
+                height: 300,
                 decoration: const BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.transparent,
                   shape: BoxShape.circle,
                 ),
                 child: Image.asset(

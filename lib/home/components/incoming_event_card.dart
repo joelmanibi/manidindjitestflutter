@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tikchap/booking/components/stand_list_view.dart';
+import 'package:tikchap/core/base_network.dart';
 import 'package:tikchap/event/model/event_response.dart';
 //import 'package:tikchap/home/model/news_model.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
-
 
 class IncomingEventCard extends StatefulWidget {
   IncomingEventCard(this.data, {Key? key}) : super(key: key);
@@ -19,6 +19,8 @@ class _IncomingEventCardState extends State<IncomingEventCard> {
     super.initState();
     initializeDateFormatting('fr_FR', null);
   }
+  final String base = getBase().toString();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -28,13 +30,13 @@ class _IncomingEventCardState extends State<IncomingEventCard> {
         height: (140 / 375.0) * MediaQuery.of(context).size.width,
         child: GestureDetector(
             onTap: () => {
-              Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => StandList(widget.data),
-            ))
-              //
-            },
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => StandList(widget.data),
+                      ))
+                  //
+                },
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,10 +49,10 @@ class _IncomingEventCardState extends State<IncomingEventCard> {
                       decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 255, 255, 255),
                         borderRadius: BorderRadius.circular(15),
-                        image:  DecorationImage(
+                        image: DecorationImage(
                           fit: BoxFit.fill,
                           image: NetworkImage(
-                              "http://192.168.40.210:8080/static/event/${widget.data.event_image!}"),
+                              "http://${base}/static/event/${widget.data.event_image!}"),
                         ),
                       ),
                     ),
@@ -67,10 +69,12 @@ class _IncomingEventCardState extends State<IncomingEventCard> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        DateFormat.yMMMMd('fr_FR').format(DateTime.parse(widget.data.event_date!)).toString(),
+                        DateFormat.yMMMMd('fr_FR')
+                            .format(DateTime.parse(widget.data.event_date!))
+                            .toString(),
                         style: TextStyle(
                           fontSize:
-                              (12 / 375.0) * MediaQuery.of(context).size.width,
+                              (10 / 375.0) * MediaQuery.of(context).size.width,
                           fontWeight: FontWeight.w600,
                           color: Colors.blueGrey,
                         ),
@@ -79,7 +83,7 @@ class _IncomingEventCardState extends State<IncomingEventCard> {
                         widget.data.event_hour!,
                         style: TextStyle(
                           fontSize:
-                              (12 / 375.0) * MediaQuery.of(context).size.width,
+                              (10 / 375.0) * MediaQuery.of(context).size.width,
                           fontWeight: FontWeight.w600,
                           color: Colors.blueGrey,
                         ),

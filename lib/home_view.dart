@@ -36,14 +36,14 @@ class _HomeViewState extends State<HomeView> {
         BottomNavyBarItem(
           icon: const Icon(Icons.home),
           title: const Text('Home'),
-          activeColor: const Color(0xFFFF7F00),
+          activeColor: const Color(0xFF0E652F),
           inactiveColor: _inactiveColor,
           textAlign: TextAlign.center,
         ),
         BottomNavyBarItem(
           icon: Icon(Icons.confirmation_num),
           title: Text('Reservations'),
-          activeColor: Color(0xFFFF7F00),
+          activeColor: const Color(0xFF0E652F),
           inactiveColor: _inactiveColor,
           textAlign: TextAlign.center,
         ),
@@ -52,7 +52,7 @@ class _HomeViewState extends State<HomeView> {
           title: Text(
             'Compte',
           ),
-          activeColor: Color(0xFFFF7F00),
+          activeColor: const Color(0xFF0E652F),
           inactiveColor: _inactiveColor,
           textAlign: TextAlign.center,
         ),
@@ -105,6 +105,7 @@ class CustomAnimatedBottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: deprecated_member_use
     final bgColor = backgroundColor ?? Theme.of(context).bottomAppBarColor;
 
     return Container(

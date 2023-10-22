@@ -1,8 +1,3 @@
-import 'package:tikchap/core/authentication_manager.dart';
-import 'package:tikchap/auth/model/login_request_model.dart';
-import 'package:tikchap/auth/model/register_request_model.dart';
-import 'package:tikchap/auth/service/auth_service.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tikchap/event/model/event_response.dart';
 import 'package:tikchap/event/service/event_service.dart';

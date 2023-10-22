@@ -1,6 +1,9 @@
 import 'package:get/get.dart';
+import 'package:tikchap/booking/model/booking_request.dart';
 import 'package:tikchap/booking/model/booking_response.dart';
 import 'package:tikchap/booking/service/booking_service.dart';
+import 'package:flutter/material.dart';
+import 'package:tikchap/home_view.dart';
 
 class BookingViewModel extends GetxController {
   BookingService? _bookingService;
@@ -21,6 +24,51 @@ class BookingViewModel extends GetxController {
       /// Show user a dialog about the error response
       // print("error");
       return throw Exception();
+    }
+  }
+
+  Future finalvalidation(
+    
+      int? ticket_stand,
+      int? ticket_event,
+      int? ticket_price,
+      String payment_amount,
+      String payment_status,
+      String payment_mode) async {
+        
+    final response = await _bookingService!.sendTicketBooking(
+        finalBookRequestModel(
+            ticket_stand: ticket_stand,
+            ticket_event: ticket_event,
+            ticket_price: ticket_price,
+            payment_amount: payment_amount,
+            payment_status: payment_status,
+            payment_mode: payment_mode));
+    print(response);
+    print('test');
+    if (response != null) {
+      Get.defaultDialog(
+          title: "Felicitation!",
+          middleText: 'Rendez-vous bientot au Stade pour le match',
+          textConfirm: 'OK',
+          backgroundColor: Color.fromARGB(255, 221, 233, 229),
+          confirmTextColor: Colors.white,
+          buttonColor: const Color(0xFF0E652F),
+          onConfirm: () {
+            Get.offAll(HomeView());
+          });
+    } else {
+      /// Show user a dialog about the error response
+      Get.defaultDialog(
+          title: "ERREUR",
+          middleText: 'Echec de validation',
+          textConfirm: 'OK',
+          backgroundColor: Color.fromARGB(255, 199, 166, 164),
+          confirmTextColor: Colors.white,
+          buttonColor: Colors.red,
+          onConfirm: () {
+            Get.back();
+          });
     }
   }
 }

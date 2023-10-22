@@ -150,9 +150,7 @@ class _HomeState extends State<Home> {
             enableInfiniteScroll: false,
             enlargeCenterPage: true,
           )),
-              ]))
-
-      
+      ]))
     ]));
   }
 }
