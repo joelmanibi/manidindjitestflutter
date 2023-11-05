@@ -343,7 +343,7 @@ bool isWAVEFormVisible = false;
                                                     ]),
                                                   ),
                                                 ])),
-             const Padding(
+              Padding(
                 padding:  EdgeInsets.symmetric(horizontal: 20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

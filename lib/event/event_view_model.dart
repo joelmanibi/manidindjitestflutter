@@ -13,10 +13,10 @@ class EventViewModel extends GetxController {
 
   Future<List<EventResponseModel?>> getallEvent() async {
     final response = await _eventService!.fetchEvent();
-   
+
     // ignore: unnecessary_null_comparison
     if (response != null) {
-      
+     
       return response;
     } else {
       /// Show user a dialog about the error response

@@ -21,16 +21,12 @@ class EventService extends GetConnect with CacheManager {
       getEvetUrl,
       headers: {'Content-Type': 'application/json', 'x-access-token': '$token'},
     );
-     print(token);
+    
     if (response.statusCode == 200) {
-      print(1);
-     // print(EventResponseModel.fromJson(json.decode(response.body)["event"]));
-      print(2);
+      
       final Map<String, dynamic> das = json.decode(response.body);
       final List<dynamic> data = das["event"];
-      print(3);
-      print(data);
-      print(3);
+      
       return data.map((json) => EventResponseModel.fromJson(json)).toList();
     } else {
       // print(json.decode(response.body));

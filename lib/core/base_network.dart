@@ -1,3 +1,3 @@
 String? getBase() {
-    return "192.168.50.210:8080";
+    return "ec2-35-180-253-62.eu-west-3.compute.amazonaws.com:8080";
   }
