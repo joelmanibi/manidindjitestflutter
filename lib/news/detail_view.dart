@@ -7,7 +7,6 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:tikchap/news/news_view_model.dart';
 import 'package:get/get.dart';
-import 'package:tikchap/onboard.dart';
 
 class DetailsScreen extends StatefulWidget {
   DetailsScreen(this.data, {Key? key}) : super(key: key);

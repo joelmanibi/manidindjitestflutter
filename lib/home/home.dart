@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tikchap/event/event_view_model.dart';
-import 'package:tikchap/event/event_view_model.dart';
 import 'package:tikchap/news/news_view_model.dart';
 import 'package:tikchap/home/components/breaking_news_card.dart';
 import 'package:tikchap/home/components/incoming_event_card.dart';
 import 'package:tikchap/news/model/news_model.dart';
-import 'package:tikchap/event/service/event_service.dart';
 import 'package:get/get.dart';
 
 class Home extends StatefulWidget {

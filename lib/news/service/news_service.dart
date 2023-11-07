@@ -43,7 +43,6 @@ class NewsService extends GetConnect with CacheManager {
         "/api/customer/v1/get-all-news-comment/$news";
 
     final String base = getBase().toString();
-    final String loginUrl = base + getNewsCommentEndpoint;
 
     var token = getFirstname();
     var getEvetUrl = Uri.http(base, getNewsCommentEndpoint);
