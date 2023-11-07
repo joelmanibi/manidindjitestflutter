@@ -39,10 +39,10 @@ class _HomeState extends State<Home> {
                   'assets/logo.png',
                   height: 70,
                 ),
-                InkWell(
-                  onTap: () {},
-                  child: SvgPicture.asset("assets/icons/user.svg"),
-                ),
+               // InkWell(
+               //   onTap: () {},
+               //   child: SvgPicture.asset("assets/icons/user.svg"),
+               // ),
               ],
             ),
           ),
@@ -63,7 +63,7 @@ class _HomeState extends State<Home> {
           //     ],
           //   ),
           // ),
-          const SizedBox(height: 4),
+        //  const SizedBox(height: 4),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: TextField(
@@ -147,7 +147,7 @@ class _HomeState extends State<Home> {
                                     horizontal: 150, vertical: 10),
                                 child: Center(
                                   child: CircularProgressIndicator(
-                                      color: Color(0xFF0E652F)),
+                                      color: Color(0xFFFF3701)),
                                 ),
                               );
                             }

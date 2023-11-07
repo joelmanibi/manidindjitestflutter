@@ -36,14 +36,14 @@ class _HomeViewState extends State<HomeView> {
         BottomNavyBarItem(
           icon: const Icon(Icons.home),
           title: const Text('Home'),
-          activeColor: const Color(0xFF0E652F),
+          activeColor: const Color(0xFFFF3701),
           inactiveColor: _inactiveColor,
           textAlign: TextAlign.center,
         ),
         BottomNavyBarItem(
           icon: Icon(Icons.confirmation_num),
           title: Text('Reservations'),
-          activeColor: const Color(0xFF0E652F),
+          activeColor: const Color(0xFFFF3701),
           inactiveColor: _inactiveColor,
           textAlign: TextAlign.center,
         ),
@@ -52,7 +52,7 @@ class _HomeViewState extends State<HomeView> {
           title: Text(
             'Compte',
           ),
-          activeColor: const Color(0xFF0E652F),
+          activeColor: const Color(0xFFFF3701),
           inactiveColor: _inactiveColor,
           textAlign: TextAlign.center,
         ),

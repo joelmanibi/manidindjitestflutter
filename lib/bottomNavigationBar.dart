@@ -49,17 +49,17 @@ class _DashboardState extends State<Dashboard> {
           type: BottomNavigationBarType.fixed,
           currentIndex: _index.value,
           onTap: (value) => _index.value = value,
-          selectedItemColor: const Color(0xFF0E652F),
+          selectedItemColor: const Color(0xFFFF7F00),
           unselectedItemColor: Colors.grey,
           selectedIconTheme: const IconThemeData(
-            color: Color(0xFF0E652F),
+            color: Color(0xFFFF7F00),
           ),
           unselectedIconTheme: const IconThemeData(
             color: Colors.grey,
           ),
           // elevation: 30,
           selectedLabelStyle:
-              const TextStyle(fontSize: 1, color: Color(0xFF0E652F)),
+              const TextStyle(fontSize: 1, color: Color(0xFFFF7F00)),
           unselectedLabelStyle: const TextStyle(
             fontSize: 1,
             color: Colors.grey,
@@ -72,14 +72,14 @@ class _DashboardState extends State<Dashboard> {
                     "assets/icons/home.svg",
                     height: 25,
                     width: 25,
-                    color: _index == 0 ? const Color(0xFF0E652F) : Colors.grey,
+                    color: _index == 0 ? const Color(0xFFFF7F00) : Colors.grey,
                   ),
                   Text(
                     "Accueil",
                     style: TextStyle(
                       fontSize: 12,
                       color:
-                          _index == 0 ? const Color(0xFF0E652F) : Colors.grey,
+                          _index == 0 ? const Color(0xFFFF7F00) : Colors.grey,
                       fontWeight:
                           _index == 0 ? FontWeight.bold : FontWeight.normal,
                     ),
@@ -95,14 +95,14 @@ class _DashboardState extends State<Dashboard> {
                     "assets/icons/ticket.svg",
                     height: 25,
                     width: 25,
-                    color: _index == 1 ? const Color(0xFF0E652F) : Colors.grey,
+                    color: _index == 1 ? const Color(0xFFFF7F00) : Colors.grey,
                   ),
                   Text(
                     "Reservation",
                     style: TextStyle(
                       fontSize: 12,
                       color:
-                          _index == 1 ? const Color(0xFF0E652F) : Colors.grey,
+                          _index == 1 ? const Color(0xFFFF7F00) : Colors.grey,
                       fontWeight:
                           _index == 1 ? FontWeight.bold : FontWeight.normal,
                     ),
@@ -119,7 +119,7 @@ class _DashboardState extends State<Dashboard> {
                     "assets/icons/user.svg",
                     height: 20,
                     width: 25,
-                    color: _index == 2 ? const Color(0xFF0E652F) : Colors.grey,
+                    color: _index == 2 ? const Color(0xFFFF7F00) : Colors.grey,
                   ),
                   SizedBox(height: 3),
                   Text(
@@ -127,7 +127,7 @@ class _DashboardState extends State<Dashboard> {
                     style: TextStyle(
                       fontSize: 12,
                       color:
-                          _index == 2 ? const Color(0xFF0E652F) : Colors.grey,
+                          _index == 2 ? const Color(0xFFFF7F00) : Colors.grey,
                       fontWeight:
                           _index == 2 ? FontWeight.bold : FontWeight.normal,
                     ),
