@@ -200,7 +200,6 @@ class _HomeState extends State<Home> {
                             ),
                           );
                         }
-
                         // Retournez un widget vide car l'affichage du CarouselSlider se fera ci-dessous
                         return SizedBox.shrink();
                       },
